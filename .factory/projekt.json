@@ -47,7 +47,13 @@
     "abschluss": null
   },
   "module": [
+    "codeql",
+    "scorecard",
     "secret-scan",
+    "dependency-review",
+    "zizmor",
+    "codescanning-inbox",
+    "audit-einordnung",
     "dependabot-inbox"
   ],
   "struktur": {
@@ -164,5 +170,11 @@
     "Lumina": "lumina",
     "Phaser": "phaser",
     "Gewaechshaus": "gewaechshaus"
+  },
+  "codeql": {
+    "sprachen": [
+      "javascript-typescript",
+      "actions"
+    ]
   }
 }

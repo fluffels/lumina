@@ -19,6 +19,7 @@ Node gemäß `engines.node` in `package.json` verwenden; `.nvmrc` legt Node 24 a
 
 ```sh
 npm ci
+git config core.hooksPath .githooks
 npm run verify
 ```
 
@@ -30,7 +31,9 @@ Factory-Besitz ist aus dem Tag `v0.8.0` des Repositories `fluffels/self-improvin
 
 Der [Codex-Einstieg](docs/codex/einstieg.md) ist ein Prototyp mit gesperrtem autonomem Ticketlauf. Die [Lumina-Einrichtung](https://github.com/fluffels/lumina/issues/2) muss reale Rollen, Dienste und Freigaben nachweisen. Kubernia und Speaker-Tooling werden durch dieses Projekt nicht verändert.
 
-Repository und Board bleiben privat. Die aktuelle GitHub-API verweigert Rulesets für dieses private Repository mit einem Upgrade-Hinweis; Branch-Erzwingung ist daher noch nicht eingerichtet. `PROJECT_TOKEN` und der projektbezogene Langfuse-Nachweis fehlen ebenfalls. Diese Grenzen sind in Ticket 2 festgehalten. Secret-Scan und Dependabot-Inbox sind übernommen; optionale Module mit nicht nachgewiesenen privaten Code-Scanning-Voraussetzungen sind nicht aktiviert.
+Repository und Board sind öffentlich. Das aktive Ruleset `main-schutz` verlangt Pull Requests und erfolgreiche Pflichtprüfungen, ohne Bypass-Akteure. Der Spiegel steht in `.github/ruleset-main-schutz.json`. Die CI erzwingt Einrichtungsbasis, Security-Audit, Factory-Nachweise und die Prüfung des PR-Texts. Fehlende Review- und Abnahmenachweise blockieren den Merge.
+
+Alle acht Sicherheitsmodule des Factory-Tags sind übernommen: CodeQL, Scorecard, Secret-Scan, Dependency Review, zizmor, Code-Scanning-Inbox, Audit-Einordnung und Dependabot-Inbox. Ihre Workflows sind erst nach dem Merge auf dem Standardbranch vollständig aktiv; einzelne PR-Analysen benötigen dort eine erste Baseline. `PROJECT_TOKEN` und der projektbezogene Langfuse-Nachweis fehlen weiterhin; die verbleibenden Einrichtungsschritte stehen in Ticket 2.
 
 ## Erste Meilensteine
 

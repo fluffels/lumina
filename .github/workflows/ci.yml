@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
 
 permissions:
   contents: read
@@ -23,3 +24,46 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run verify
+
+  security-audit:
+    name: Security-Audit (npm audit)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm audit --audit-level=high
+
+  factory-evidence:
+    name: Factory-Nachweise
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: read
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+      - name: Plan und unabhängigen Review nachweisen
+        env:
+          FACTORY_DIFF_BASE: ${{ github.event.pull_request.base.sha }}
+        run: node scripts/check-review-nachweis.mjs
+      - name: Holdout-Abnahme nachweisen
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FACTORY_DIFF_BASE: ${{ github.event.pull_request.base.sha }}
+          FACTORY_PR_NUMBER: ${{ github.event.pull_request.number }}
+          FACTORY_PR_DRAFT: ${{ github.event.pull_request.draft }}
+          FACTORY_PR_BODY: ${{ github.event.pull_request.body }}
+        run: node scripts/check-abnahme-nachweis.mjs

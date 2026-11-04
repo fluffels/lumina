@@ -1,0 +1,19 @@
+{
+  "id": 26543190,
+  "name": "main-schutz",
+  "stand": "2026-11-04",
+  "requiredChecks": [
+    "Einrichtungsbasis pruefen",
+    "Security-Audit (npm audit)",
+    "Factory-Nachweise",
+    "PR-Text interne Bezuege pruefen"
+  ],
+  "codeScanning": [
+    {
+      "tool": "CodeQL",
+      "sicherheitsSchwelle": "high_or_higher",
+      "alertSchwelle": "errors"
+    }
+  ],
+  "bypassActors": []
+}
