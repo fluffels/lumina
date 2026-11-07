@@ -1,5 +1,7 @@
 # Projekt-Brain: Anlaufstellen
 
+Kern: [Anlaufstellen der Factory](https://github.com/fluffels/self-improving-agent-harness-and-factory/blob/v0.9.0/docs/referenz/anlaufstellen.md)
+
 | Quelle | Inhalt |
 | --- | --- |
 | [AGENTS.md](../../AGENTS.md) | Verbindliche Regeln und Factory-Besitz |
