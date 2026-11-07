@@ -4,7 +4,7 @@
 
 ## Zweck
 
-Lumina ist ein abgegrenztes neues Produktprojekt. Kubernia, Speaker-Tooling und die Factory werden durch diesen Pilot nicht umgebaut. Die Fabrik soll dieselben verbindlichen Phasen und Qualitätsanforderungen für Claude und Codex tragen. Rollen, Hook-Registrierungen und Werkzeuge dürfen sich je Laufzeit unterscheiden.
+Lumina ist ein abgegrenztes neues Produktprojekt. Bestehende andere Projekte und der Factory-Kern werden durch diesen Pilot nicht umgebaut. Die Fabrik soll dieselben verbindlichen Phasen und Qualitätsanforderungen für Claude und Codex tragen. Rollen, Hook-Registrierungen und Werkzeuge dürfen sich je Laufzeit unterscheiden.
 
 Der bekannte TypeScript-/Phaser-/Vite-Stack reduziert gleichzeitige Änderungen. Ein anderer Stack wird erst nach belastbaren Durchläufen geprüft. Es entsteht kein zweiter Orchestrator und kein Ersatzwerkzeug zum Umgehen einer fehlenden Fähigkeit.
 

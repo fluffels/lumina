@@ -93,5 +93,6 @@ Lumina ist ein deutschsprachiges 2D-Lernspiel über KI. Produktvision: [Spielide
 - Codex bleibt an die Vorprüfung gebunden. Eine dokumentierte fehlende Fähigkeit ist ein Befund, keine Erlaubnis zum Ersatz durch eigene Tools, ein anderes Agentensystem oder eine neue Laufzeit.
 - Die [Pilot-Abnahme](docs/fabrik-pilot.md) trennt Einrichtung, tatsächliche Wirksamkeit und autonome Freigabe. Erst nach bestandener Factory-Gesamtabnahme beginnt der autonome Codex-Ticketlauf.
 - Gemeinsame Regeln, Qualitätskriterien und Phasen gelten für beide Systeme; identische Tool-Aufrufe und identischer Code sind kein Ziel.
+- Für ausdrücklich beauftragte Codex-Arbeit in Lumina ist die fachliche Leseoperation `Read` auf das vorhandene `exec_command` mit JavaScript/Node.js `node:fs` abgebildet: bekannte Dateien gezielt und große Seiten in begrenzten Zeilenabschnitten lesen. Fachliche Pfad-, Holdout- und Lens-Grenzen bleiben verbindlich; die Abbildung erteilt keine zusätzlichen Leserechte, keine Secret-Zugriffe und keine autonome Freigabe. Sie belegt weder technisch erzwungene Leserechte noch Quarantäne.
 - Fabrik-Befunde im vorhandenen Factory-Sammelticket beziehungsweise passenden offenen Factory-Issue festhalten; Produktarbeit bleibt auf dem Lumina-Board. Keine Spiegel-Tickets für bereits vorhandene Factory-Arbeit anlegen.
 <!-- factory-projekt:ende -->

@@ -27,9 +27,9 @@ Diese Prüfung umfasst die Einrichtungsbasis und den Factory-Bezug. Es gibt noch
 
 ## Gemeinsame Agenten-Fabrik
 
-Factory-Besitz ist aus dem Tag `v0.8.0` des Repositories `fluffels/self-improving-agent-harness-and-factory` synchronisiert. Regeln und Werkzeuge werden dort weiterentwickelt und über den regulären Sync übernommen. `npm run check:factorydrift` prüft die unveränderte Herkunft; `npm run skills:sync -- --check` die Skill-Zeiger.
+Factory-Besitz ist aus dem Tag `v0.9.0` des Repositories `fluffels/self-improving-agent-harness-and-factory` synchronisiert. Der Erstimport aus `v0.8.0` bleibt in [Commit a993182](https://github.com/fluffels/lumina/commit/a9931826a91563d26ab79d464445ce5ec6fafa5d) nachvollziehbar. Regeln und Werkzeuge werden dort weiterentwickelt und über den regulären Sync übernommen. `npm run check:factorydrift` prüft die unveränderte Herkunft; `npm run skills:sync -- --check` die Skill-Zeiger.
 
-Der [Codex-Einstieg](docs/codex/einstieg.md) ist ein Prototyp mit gesperrtem autonomem Ticketlauf. Die [Lumina-Einrichtung](https://github.com/fluffels/lumina/issues/2) muss reale Rollen, Dienste und Freigaben nachweisen. Kubernia und Speaker-Tooling werden durch dieses Projekt nicht verändert.
+Der [Codex-Einstieg](docs/codex/einstieg.md) ist ein Prototyp mit gesperrtem autonomem Ticketlauf. Die [Lumina-Einrichtung](https://github.com/fluffels/lumina/issues/2) muss reale Rollen, Dienste und Freigaben nachweisen. Der Pilot bleibt auf dieses Produktprojekt begrenzt.
 
 Repository und Board sind öffentlich. Das aktive Ruleset `main-schutz` verlangt Pull Requests und erfolgreiche Pflichtprüfungen, ohne Bypass-Akteure. Der Spiegel steht in `.github/ruleset-main-schutz.json`. Die CI erzwingt Einrichtungsbasis, Security-Audit, Factory-Nachweise und die Prüfung des PR-Texts. Fehlende Review- und Abnahmenachweise blockieren den Merge.
 
