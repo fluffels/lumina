@@ -7,6 +7,7 @@ Kern: [Anlaufstellen der Factory](https://github.com/fluffels/self-improving-age
 | [AGENTS.md](../../AGENTS.md) | Verbindliche Regeln und Factory-Besitz |
 | [Spielidee](../spielidee.md) | Welt, Spielschleife, Lernziele und Ausbaustufen |
 | [Gewächshaus](../mission-gewaechshaus.md) | Erste Mission, Simulationsvertrag und Abnahme |
+| [Projektglossar](../glossar.md) | Trainingsdaten, Trainingspool, Prüfdaten und Simulationsvertrag |
 | [Technik](../technik.md) | Stack, geplante Grenzen und Einrichtungsprüfung |
 | [Fabrik-Pilot](../fabrik-pilot.md) | Gemeinsame Phasen und prüfbare Freigabestufen |
 | [Codex-Einstieg](../codex/einstieg.md) | Synchronisierter Laufzeitstand und Grenzen |

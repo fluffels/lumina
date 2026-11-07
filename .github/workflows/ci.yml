@@ -1,4 +1,4 @@
-name: Einrichtungsbasis
+name: CI
 
 on:
   push:
