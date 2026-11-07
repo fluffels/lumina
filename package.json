@@ -1,0 +1,22 @@
+{
+  "name": "lumina",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Lumina – die Stadt der denkenden Maschinen: Projekt- und Factory-Einrichtung vor dem ersten Spielabschnitt.",
+  "engines": { "node": ">=22.23.4" },
+  "scripts": {
+    "skills:sync": "node scripts/skills-sync.mjs",
+    "factory:sync": "node scripts/factory-sync.mjs",
+    "check:factorydrift": "node scripts/check-factory-drift.mjs",
+    "check:factorylinks": "node scripts/check-factory-links.mjs",
+    "check:contextsize": "node scripts/check-context-size.mjs",
+    "check:steuerbytes": "node scripts/check-steuerbytes.mjs",
+    "check:internalrefs": "node scripts/check-internalrefs.mjs",
+    "check:diffsize": "node scripts/check-diffsize.mjs",
+    "check:lockfile": "node scripts/check-lockfile.mjs",
+    "verify:kompakt": "node scripts/verify-lauf.mjs",
+    "verify": "npm run check:factorydrift && npm run check:factorylinks && npm run skills:sync -- --check && npm run check:contextsize && npm run check:steuerbytes && npm run check:internalrefs && npm run check:lockfile && npm run check:diffsize"
+  },
+  "devDependencies": { "yaml": "2.9.1" }
+}
